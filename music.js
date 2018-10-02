@@ -857,12 +857,3 @@ let remas13 = [
         "rate": ""
     },
 ]
-
-let GetMusicList = function() {
-    return [
-        mas12p,
-        mas13,
-        remas12p,
-        remas13
-    ];
-}

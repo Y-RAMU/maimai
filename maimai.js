@@ -294,9 +294,12 @@ let PrintMusicList = function () {
 }
 
 console.log("Get Target...");
-LoadJavaScript("./music.js", function() {
-    targetList = GetMusicList();
-});
+$.getScript("./music.js", function(){
+    targetList.push(mas12p);
+    targetList.push(mas13);
+    targetList.push(remas12p);
+    targetList.push(remas13);
+})
 console.log("Get Master...");
 GetMusicData(master_url);
 console.log("Get Re:Master...");
