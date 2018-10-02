@@ -299,6 +299,8 @@ $.getScript("./music.js", function(){
     targetList.push(mas13);
     targetList.push(remas12p);
     targetList.push(remas13);
+
+    console.log(targetList[0]);
 })
 console.log("Get Master...");
 GetMusicData(master_url);
