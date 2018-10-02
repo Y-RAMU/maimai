@@ -294,7 +294,7 @@ let PrintMusicList = function () {
 }
 
 console.log("Get Target...");
-$.getScript("./music.js", function(){
+$.getScript("https://cdn.rawgit.com/Y-RAMU/maimai/4b00fe49/music.js", function(){
     targetList.push(mas12p);
     targetList.push(mas13);
     targetList.push(remas12p);
