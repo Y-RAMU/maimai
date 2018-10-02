@@ -293,27 +293,22 @@ let PrintMusicList = function () {
     win.document.write(html);
 }
 
-console.log("Get Target...");
-$.getScript("https://cdn.rawgit.com/Y-RAMU/maimai/4b00fe49/music.js", function(){
-    targetList.push(mas12p);
-    targetList.push(mas13);
-    targetList.push(remas12p);
-    targetList.push(remas13);
 
-    console.log(mas12p);
-})
 console.log("Get Master...");
 GetMusicData(master_url);
 console.log("Get Re:Master...");
 GetMusicData(remaster_url);
-console.log("Merge Master 12+...");
-MergeMusicList(targetList[0]);
-console.log("Merge Master 13...");
-MergeMusicList(targetList[1]);
-console.log("Merge Re:Master 12+...");
-MergeMusicList(targetList[2]);
-console.log("Merge Re:Master 13...");
-MergeMusicList(targetList[3]);
+console.log("Get Target...");
+$.getScript("https://cdn.rawgit.com/Y-RAMU/maimai/4b00fe49/music.js", function(){
+    console.log("Merge Master 12+...");
+    MergeMusicList(mas12p);
+    console.log("Merge Master 13...");
+    MergeMusicList(mas13);
+    console.log("Merge Re:Master 12+...");
+    MergeMusicList(remas12p);
+    console.log("Merge Re:Master 13...");
+    MergeMusicList(remas13);
+})
 console.log("Sort List...");
 SortList();
 console.log("Get UserData...");
