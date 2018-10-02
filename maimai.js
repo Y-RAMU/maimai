@@ -300,7 +300,7 @@ $.getScript("./music.js", function(){
     targetList.push(remas12p);
     targetList.push(remas13);
 
-    console.log(targetList[0]);
+    console.log(mas12p);
 })
 console.log("Get Master...");
 GetMusicData(master_url);
