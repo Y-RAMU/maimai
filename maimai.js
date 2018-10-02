@@ -3,10 +3,6 @@ let user_url = "playerData/";
 let master_url = "music/masterGenre/";
 let remaster_url = "music/remasterGenre/";
 
-let script = document.createElement("script");
-script.src = "music.js";
-document.body.appendChild(script);
-
 let userData = {
     "name": "",
     "rating": "",
@@ -29,7 +25,13 @@ let mergeList = []
 
 let sortedList = []
 
-let targetList = GetMusicList();
+let targetList = []
+
+let LoadJavaScript = function(url) {
+    let script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = url;
+}
 
 let GetUserData = function () {
     $.ajax({
@@ -291,7 +293,10 @@ let PrintMusicList = function () {
     win.document.write(html);
 }
 
-
+console.log("Get Target...");
+LoadJavaScript("./music.js", function() {
+    targetList = GetMusicList();
+});
 console.log("Get Master...");
 GetMusicData(master_url);
 console.log("Get Re:Master...");
