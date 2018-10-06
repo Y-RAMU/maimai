@@ -295,7 +295,7 @@ let PrintMusicList = function () {
 }
 
 
-$.getScript("https://cdn.rawgit.com/Y-RAMU/maimai/4b00fe49/music.js", function(){
+$.getScript("https://rawgit.com/Y-RAMU/maimai/maimai_RateCalc/maimai_RateCalc/music.js", function(){
     console.log("Get Master...");
     GetMusicData(master_url);
     console.log("Get Re:Master...");
