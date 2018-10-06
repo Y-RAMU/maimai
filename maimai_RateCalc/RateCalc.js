@@ -10,6 +10,9 @@ let userData = {
     "best": ""
 }
 
+
+/** Music Data Model **/
+/*
 let musicData = {
     "title": "",
     "diff": "",
@@ -18,6 +21,7 @@ let musicData = {
     "achievement": "",
     "rate": ""
 }
+*/
 
 let musicList = []
 
@@ -27,11 +31,6 @@ let sortedList = []
 
 let targetList = []
 
-let LoadJavaScript = function(url) {
-    let script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = url;
-}
 
 let GetUserData = function () {
     $.ajax({
@@ -255,7 +254,9 @@ let SortList = function () {
 let PrintMusicList = function () {
     let html = "";
 
-    html += "<html><body>";
+    html += "<html>";
+    html += "<meta name=\"viewport\" content=\"width=device-width\">";  // スマホ対応
+    html += "<body>";
     html += "<div style=\"text-align:center\">" + userData.name  + "</div><br>";
     html += "<div style=\"text-align:center\">" + userData.title + "</div><br>";
     html += "<div style=\"text-align:center\">" + "現在/ベスト : " + userData.rating + "/" + userData.best + "</div><br>";
